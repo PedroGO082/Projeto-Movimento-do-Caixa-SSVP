@@ -81,6 +81,8 @@ Este é um sistema de gestão desenvolvido para apoiar as atividades da Sociedad
 
       python main.py
 
+  *Para salvar as alterações realizadas utilize a opção 5 para finalizar o programa
+
 
 
 

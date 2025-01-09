@@ -3,6 +3,7 @@ import json
 from models.cadastro import Cadastrador
 from models.conferencia import Conferencia
 from models.movimento_mensal import Caixa
+from models.cadastro import Membro
 #from models.movimento_mens
 
 
@@ -15,39 +16,59 @@ class SistemaSSVP:
         self.caixa.carregar_dados("caixa.json") 
         self.load_data()  # Carrega os dados do arquivo, se existirem
 
+    def save_data(self):
+    
+        data = {
+            "membros": [membro.__dict__ for membro in self.cadastrador.get_membros()],
+            "confrades": [confrade.__dict__ for confrade in self.cadastrador.get_confrades()],
+            "consocias": [consocia.__dict__ for consocia in self.cadastrador.get_consocia()],
+            "assistidos": [assistido.__dict__ for assistido in self.cadastrador.get_assistidos()],
+            "caixa": {
+            "saldo_anterior": self.caixa.anterior,
+            "dados_mensais": self.caixa.dados_mensais  # Salva os dados mensais do caixa
+            }
+        }
+        with open(self.data_file, "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=4)
+        print("Dados salvos com sucesso!")
+
+
     def load_data(self):
-        """Carrega os dados do arquivo JSON, se existirem."""
+   
         if os.path.exists(self.data_file):
             with open(self.data_file, "r", encoding="utf-8") as file:
                 data = json.load(file)
-                # Restaura os membros
+            
                 for membro in data.get("membros", []):
                     self.cadastrador.cadastrar_membro(
                         membro["nome"], membro["sexo"], membro["data_nascimento"],
                         membro["proclamacao"], membro["endereco"], membro["encargo"], membro["ativo"]
-                    )
-                # Restaura os assistidos
+                )
+            
+                for confrade in data.get("confrades", []):
+                    self.cadastrador.confrades.append(Membro(
+                        confrade["nome"], confrade["sexo"], confrade["data_nascimento"],
+                        confrade["proclamacao"], confrade["endereco"], confrade["encargo"], confrade["ativo"]
+                 ))
+            
+                for consocia in data.get("consocias", []):
+                    self.cadastrador.consocia.append(Membro(
+                        consocia["nome"], consocia["sexo"], consocia["data_nascimento"],
+                        consocia["proclamacao"], consocia["endereco"], consocia["encargo"], consocia["ativo"]
+                    ))
+            
                 for assistido in data.get("assistidos", []):
                     self.cadastrador.cadastrar_assistido(
                         assistido["nome"], assistido["sexo"], assistido["data_nascimento"],
                         assistido["endereco"], assistido["membros_assistidos"], assistido["ativo"]
                     )
-                # Restaura o saldo anterior do caixa
+            
                 self.caixa.anterior = data.get("caixa", {}).get("saldo_anterior", 0)
+                self.caixa.dados_mensais = data.get("caixa", {}).get("dados_mensais", {})
                 print("Dados carregados com sucesso!")
         else:
             print("Nenhum dado encontrado. Um novo arquivo será criado ao salvar.")
 
-    def save_data(self):
-        """Salva os dados no arquivo JSON."""
-        data = {
-            "membros": [membro.__dict__ for membro in self.cadastrador.get_membros()],
-            "assistidos": [assistido.__dict__ for assistido in self.cadastrador.get_assistidos()],
-            "caixa": {"saldo_anterior": self.caixa.anterior}
-        }
-        with open(self.data_file, "w", encoding="utf-8") as file:
-            json.dump(data, file, ensure_ascii=False, indent=4)
-        print("Dados salvos com sucesso!")
 
     def menu_principal(self):
         while True:

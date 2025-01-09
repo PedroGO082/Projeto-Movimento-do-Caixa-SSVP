@@ -9,10 +9,94 @@
             "endereco": "5645959",
             "encargo": "Presidente",
             "ativo": "ativo"
+        },
+        {
+            "nome": "luca",
+            "sexo": "m",
+            "cfd_or_csc": "Confrade",
+            "data_nascimento": "01/01/2001",
+            "proclamacao": "01/01/2101",
+            "endereco": "545154154",
+            "encargo": "Presidente",
+            "ativo": "ativo"
+        },
+        {
+            "nome": "d",
+            "sexo": "m",
+            "cfd_or_csc": "Confrade",
+            "data_nascimento": "01/01/2001",
+            "proclamacao": "01/01/2001",
+            "endereco": "1651465",
+            "encargo": "Presidente",
+            "ativo": "ativo"
         }
     ],
+    "confrades": [
+        {
+            "nome": "Lucas Gomes",
+            "sexo": "m",
+            "cfd_or_csc": "Confrade",
+            "data_nascimento": "01/01/2001",
+            "proclamacao": "01/01/2001",
+            "endereco": "5645959",
+            "encargo": "Presidente",
+            "ativo": "ativo"
+        },
+        {
+            "nome": "luca",
+            "sexo": "m",
+            "cfd_or_csc": "Confrade",
+            "data_nascimento": "01/01/2001",
+            "proclamacao": "01/01/2101",
+            "endereco": "545154154",
+            "encargo": "Presidente",
+            "ativo": "ativo"
+        },
+        {
+            "nome": "d",
+            "sexo": "m",
+            "cfd_or_csc": "Confrade",
+            "data_nascimento": "01/01/2001",
+            "proclamacao": "01/01/2001",
+            "endereco": "1651465",
+            "encargo": "Presidente",
+            "ativo": "ativo"
+        },
+        {
+            "nome": "Lucas Gomes",
+            "sexo": "m",
+            "cfd_or_csc": "Confrade",
+            "data_nascimento": "01/01/2001",
+            "proclamacao": "01/01/2001",
+            "endereco": "5645959",
+            "encargo": "Presidente",
+            "ativo": "ativo"
+        },
+        {
+            "nome": "luca",
+            "sexo": "m",
+            "cfd_or_csc": "Confrade",
+            "data_nascimento": "01/01/2001",
+            "proclamacao": "01/01/2101",
+            "endereco": "545154154",
+            "encargo": "Presidente",
+            "ativo": "ativo"
+        },
+        {
+            "nome": "d",
+            "sexo": "m",
+            "cfd_or_csc": "Confrade",
+            "data_nascimento": "01/01/2001",
+            "proclamacao": "01/01/2001",
+            "endereco": "1651465",
+            "encargo": "Presidente",
+            "ativo": "ativo"
+        }
+    ],
+    "consocias": [],
     "assistidos": [],
     "caixa": {
-        "saldo_anterior": 0
+        "saldo_anterior": 0,
+        "dados_mensais": {}
     }
 }
