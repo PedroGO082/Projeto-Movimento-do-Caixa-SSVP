@@ -49,8 +49,7 @@ Este é um sistema de gestão desenvolvido para apoiar as atividades da Sociedad
 | Campo                 | Tipo      | Formato ou Valores Aceitos                                                      |
 |--------------------   |-----------|---------------------------------------------------------------------------------|
 | `nome`                | `str`     | Texto livre                                                                     |
-| `sexo`                | `str`     | 
-`"M"` para masculino ou `"F"` para feminino                                                                           |
+| `sexo`                | `str`     | `"M"` para masculino ou `"F"` para feminino                                                                           |
 | `data_nascimento`     | `str`     | `dd/mm/aaaa`                                                                    |
 | `endereco`            | `str`     | Texto livre                                                                     |
 | `membros_assistidos`  | `int`     | Número inteiro                                                                  |
@@ -72,30 +71,40 @@ Este é um sistema de gestão desenvolvido para apoiar as atividades da Sociedad
 
 1. **Clone o Repositório:**
    ```bash
+   
    git clone https://github.com/seu-usuario/sistema-ssvp.git
+   
    cd sistema-ssvp
-Instale os Requisitos (caso necessário):
+   
+2. **Execute o Sistema:**
+   ```bash
 
-bash
-Copiar código
-pip install -r requirements.txt
-Execute o Sistema:
+      python main.py
 
-bash
-Copiar código
-python main.py
-Estrutura do Projeto
-plaintext
-Copiar código
-sistema-ssvp/
+
+
+
+
+
+##Estrutura do Projeto
+
+**sistema-ssvp/**
                 ├── models/
+                
                 │   ├── cadastro.py          # Classes relacionadas a membros e assistidos
+                
                 │   ├── conferencia.py       # Classe da conferência
+                
                 │   ├── movimento_mensal.py  # Controle financeiro (Caixa)
+                
                 ├── main.py                  # Arquivo principal do sistema
+                
                 ├── data.json                # Dados persistidos (membros e assistidos)
+                
                 ├── caixa.json               # Dados persistidos (movimentações financeiras)
+                
                 ├── README.md                # Documentação do projeto
+                
 # Casos de Uso
 Gerenciamento de Membros
 Cadastro de membros da conferência (Confrades e Consócias).
@@ -109,23 +118,7 @@ Relatórios
 Visualização de dados financeiros por mês.
 Relatórios de membros e assistidos.
 
-## Contribuição
-#Faça um fork do repositório.
-Crie uma branch para sua feature ou correção:
-bash
-Copiar código
-git checkout -b minha-feature
-Faça o commit de suas alterações:
-bash
-Copiar código
-git commit -m "Adicionei minha feature"
-Faça o push para a branch:
-bash
-Copiar código
-git push origin minha-feature
-Abra um Pull Request.
 
-
-Contato
+# Contato
 Desenvolvedor: Pedro Gomes Oliveira
 GitHub: https://github.com/PedroGO082
