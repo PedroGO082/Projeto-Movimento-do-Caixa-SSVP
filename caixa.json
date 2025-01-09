@@ -1,0 +1,29 @@
+{
+    "1": {
+        "receitas_detalhadas": {
+            "coleta": 1.0,
+            "subscritores_bemfeitores": 1.0,
+            "doacoes": 1.0,
+            "eventos": 1.0,
+            "outras_fontes": 1.0,
+            "subvencao_oficial": 1.0,
+            "ozanam_solidariedade": 1.0,
+            "uniao_fraternal": 1.0,
+            "contri_cc": 1.0,
+            "contri_cmb": 1.0
+        },
+        "despesas_detalhadas": {
+            "cesta_basica": 1.0,
+            "moradia": 1.0,
+            "contas_assistidos": 1.0,
+            "despesas_oe": 1.0,
+            "repasse_uniao": 1.0,
+            "despesas_adm": 1.0,
+            "ozanam_solidariedade": 1.0,
+            "contri_cc": 1.0,
+            "contri_cmb": 1.0
+        },
+        "saldo_anterior": 0,
+        "saldo_final": 0
+    }
+}
