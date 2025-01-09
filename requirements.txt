@@ -4,3 +4,4 @@ reportlab==3.6.12
 SQLAlchemy==2.0.21
 pytest==8.3.4
 matplotlib==3.8.1
+prompt_toolkit==3.0.38
